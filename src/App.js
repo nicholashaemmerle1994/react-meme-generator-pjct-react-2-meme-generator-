@@ -15,15 +15,16 @@ const App = () => {
       }}
     >
       <h1>The Meme Generator</h1>
-      <label htmlFor="topText">Top text</label>
-      <input
-        onChange={(event) => {
-          setTopText(event.currentTarget.value);
-        }}
-        className="Top text"
-        placeholder="Top Text"
-      />
-
+      <label htmlFor="topText">
+        Top text
+        <input
+          onChange={(event) => {
+            setTopText(event.currentTarget.value);
+          }}
+          className="topText"
+          placeholder="Top Text"
+        />
+      </label>
       <br />
       <br />
       <label>
