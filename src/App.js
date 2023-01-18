@@ -21,7 +21,7 @@ const App = () => {
           onChange={(event) => {
             setTopText(event.currentTarget.value);
           }}
-          className="topText"
+          className="Top text"
           placeholder="Top Text"
         />
       </label>
