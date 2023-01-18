@@ -15,19 +15,6 @@ const App = () => {
       }}
     >
       <h1>The Meme Generator</h1>
-      <label>
-        Meme template
-        <input
-          onChange={(event) => {
-            setMemeTemplate(event.currentTarget.value);
-          }}
-          className="memeTemplate"
-          placeholder="Meme Template"
-        />
-      </label>
-      <br />
-
-      <br />
       <label htmlFor="topText">
         Top text
         <input
@@ -36,6 +23,18 @@ const App = () => {
           }}
           className="topText"
           placeholder="Top Text"
+        />
+      </label>
+      <br />
+      <br />
+      <label>
+        Meme template
+        <input
+          onChange={(event) => {
+            setMemeTemplate(event.currentTarget.value);
+          }}
+          className="memeTemplate"
+          placeholder="Meme Template"
         />
       </label>
       <br />
