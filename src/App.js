@@ -3,8 +3,8 @@ import { useState } from 'react';
 
 const App = () => {
   const [memeTemplate, setMemeTemplate] = useState('buzz');
-  const [topText, setTopText] = useState(' ');
-  const [bottomText, setBottomText] = useState(' ');
+  const [topText, setTopText] = useState('');
+  const [bottomText, setBottomText] = useState('');
   const memeUrl = (memes, top, bottom) => {
     if (!top && !bottom) {
       return `https://api.memegen.link/images/${memes}.png`;
