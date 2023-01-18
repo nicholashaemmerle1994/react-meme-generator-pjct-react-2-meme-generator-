@@ -7,7 +7,13 @@ const App = () => {
   const [bottomText, setBottomText] = useState(' ');
 
   return (
-    <div>
+    <div
+      style={{
+        display: 'inline-block',
+        textAlign: 'center',
+        justifyContent: 'center',
+      }}
+    >
       <h1>The Meme Generator</h1>
       <label>
         Meme template
@@ -20,6 +26,7 @@ const App = () => {
         />
       </label>
       <br />
+
       <br />
       <label htmlFor="topText">
         Top text
@@ -47,11 +54,13 @@ const App = () => {
       <br />
       <br />
       <img
+        style={{ width: '300px' }}
         src={`https://api.memegen.link/images/${memeTemplate}/${topText}/${bottomText}`}
         alt="meme"
         data-test-id="meme-image"
       />
-
+      <br />
+      <br />
       <button
         onClick={() => {
           saveAs(
