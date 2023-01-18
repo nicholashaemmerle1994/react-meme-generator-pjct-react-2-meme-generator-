@@ -5,15 +5,15 @@ const App = () => {
   const [memeTemplate, setMemeTemplate] = useState('buzz');
   const [topText, setTopText] = useState(' ');
   const [bottomText, setBottomText] = useState(' ');
-  const memeUrl = (memeTemplate, topText, bottomText) => {
-    if (!topText && bottomText) {
-      return `https://api.memegen.link/images/${memeTemplate}.png`;
-    } else if (!bottomText) {
-      return `https://api.memegen.link/images/${memeTemplate}/${topText}.png`;
-    } else if (!topText) {
-      return `https://api.memegen.link/images/${memeTemplate}/_/${bottomText}.png`;
+  const memeUrl = (memes, top, bottom) => {
+    if (!top && !bottom) {
+      return `https://api.memegen.link/images/${memes}.png`;
+    } else if (!bottom) {
+      return `https://api.memegen.link/images/${memes}/${top}.png`;
+    } else if (!top) {
+      return `https://api.memegen.link/images/${memes}/_/${bottom}.png`;
     } else {
-      return `https://api.memegen.link/images/${memeTemplate}/${topText}/${bottomText}.png`;
+      return `https://api.memegen.link/images/${memes}/${top}/${bottom}.png`;
     }
   };
   return (
@@ -30,6 +30,7 @@ const App = () => {
       <label>
         Top text
         <input
+          value={topText}
           onChange={(event) => {
             setTopText(event.currentTarget.value);
           }}
